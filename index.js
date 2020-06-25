@@ -37,7 +37,7 @@ setInterval(function () {
             meme.send("greshka brat");
         }))
 }, 1000 * 60 * 60)
-// sending meme when you time a !meme
+// sending meme when you type a !meme
 
 
 client.on("message", message => {
@@ -58,20 +58,6 @@ client.on("message", message => {
                 message.channel.send("greshka brat");
             })
     }
-
-    // kick a member
-    if (message.member.hasPermission([`KICK_MEMBERS`, `BAN_MEMBERS`])) {
-        if (message.content.startsWith(`${prefix}kick`)) {
-            let member = message.mentions.members.first();
-            member.kick().then((member) => {
-                message.channel.send("trqbva da e kiknat nqkoi")
-            }).catch(() => {
-                message.channel.send("dai nqkvo ima kato horata")
-            })
-        }
-    }
-
-
 
     //For kick 
     //if (message.member.hasPermission([`KICK_MEMBERS`, `BAN_MEMBERS`])) {
